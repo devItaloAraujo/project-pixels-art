@@ -2,6 +2,9 @@
   width: 40px;
   height: 40px;
   border: solid black 1px;
+  display: inline-block;
+  margin-top: -5px;
+  margin-left: -1px;
 }
 
 .circle {
@@ -11,4 +14,8 @@
   border: solid black 1px;
   display: inline-block;
   margin: 3px;
+}
+
+section {
+  margin-top: 5px;
 }
