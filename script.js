@@ -1,4 +1,4 @@
-const numColors = 3;
+const numColors = 5;
 
 // Paleta de Cores
 
@@ -80,12 +80,20 @@ if (localStorage.pixelBoard) {
 
 const selectColor = (event) => {
   document.querySelector('.selected').classList.remove('selected');
+  for (div of document.querySelectorAll('.selected')) {
+    div.classList.remove('selected');
+  }
   event.target.classList.add('selected');
 };
 
 const paint = (event) => {
   event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
 };
+
+const paint2 = (event) => {
+  if (event.which === 1) {
+    event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
+}};
 
 const resetBoard = () => {
   for (const pixel of pixels) {
@@ -109,12 +117,13 @@ const buttonVQV = document.getElementById('generate-board');
 
 const novaBoard = () => {
   if (input.value.length === 0) {
-    alert('Board inválido!');
+    alert('Selecione um tamanho pro quadro!');
   } else if (input.value < 5) {
     input.value = 5;
   } else if (input.value > 50) {
     input.value = 50;
   }
+  
   tamBoard = parseInt(input.value, 10) ** 2;
   pixelsFrame.innerHTML = '';
   for (let index = 0; index < tamBoard; index += 1) {
@@ -132,6 +141,12 @@ const novaBoard = () => {
 
 buttonVQV.addEventListener('click', novaBoard);
 
+for (let pixel of pixels) {
+  pixel.addEventListener('mouseenter', (event) => {
+  paint2(event);
+  saveBoard();
+})};
+  
 document.addEventListener('click', (event) => {
   if (event.target.classList.contains('color')) {
     selectColor(event);
