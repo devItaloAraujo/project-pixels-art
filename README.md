@@ -1,10 +1,13 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+### Projeto Pixels Art 🎨
+
+Esse projeto simples se trata de uma página **HTML**, estilizada em **CSS** puro e com lógica em **JavaScript** para emular um quadro em branco e uma paleta de cores.
+
+Esse quadro pode ser redimensionado e preenchido com diversas cores, através da manipulação do  **DOM**,  sendo o 'desenho' salvo entre sessões do navegador por meio do **local storage**.
+
+Para desenvolver um bom padrão de código foi utilizada o **ESLint**.
+
+Esse mesmo projeto pode ser acessado online pelo link do meu GitHub Pages:
+
+https://devitaloaraujo.github.io/Paleta-de-cores-pixels-art/ 
+
+Agora para rodar esse projeto localmente, você pode clonar esse repositório e abrir com o navegador o arquivo Index.html.
